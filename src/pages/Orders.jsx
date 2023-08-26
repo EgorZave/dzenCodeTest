@@ -5,7 +5,7 @@ import { useState } from 'react'
 import Order from '../components/Order/Order'
 import Product from '../components/Product/Product'
 import transition from '../transition';
-import Modal from "../components/modal/index";
+import Modal from "../components/Modal/Index";
 import { useDispatch } from "react-redux";
 import { setIsModalOpen } from "../slices/modalSlice";
 import { setOrder } from "../slices/selectedOrderSlice";

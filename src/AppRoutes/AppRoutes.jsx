@@ -1,5 +1,5 @@
 import AnimatedRoutes from "./AnimatedRoutes"
-import Header from "../components/header/header"
+import Header from "../components/Header/Header"
 function AppRoutes() {
 
    return (
