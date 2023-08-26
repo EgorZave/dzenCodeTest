@@ -1,0 +1,67 @@
+.back {
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   background-color: rgba(0, 0, 0, 0.4);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 1;
+}
+
+.modalBuy {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   display: flex;
+   width: 500px;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   background-color: #2b9f94;
+   border-radius: 10px;
+}
+
+.btn-wrap {
+   margin-top: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.modalHeader {
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   text-align: left;
+   margin: 0;
+   padding: 20px 0;
+   color: #000000;
+   background-color: #ffffff;
+   font-size: 24px;
+}
+
+.text {
+   color: #0B0E1B;
+   text-align: center;
+   margin: 15px 0;
+   font-size: 22px;
+   font-weight: 500;
+}
+
+.btn-wrap {
+   display: flex;
+   gap: 100px;
+   padding-bottom: 10px;
+}
+
+.close-button {
+   color: aliceblue;
+   border: none;
+   padding: 10px;
+   background-color: #0B0E1B;
+   cursor: pointer;
+}

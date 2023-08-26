@@ -1,0 +1,122 @@
+#root {
+   align-items: center;
+   justify-content: center;
+   min-height: 100dvh;
+   width: 100%;
+   background-color: #d3d4d6;
+}
+
+.main-wrap {
+   max-width: 1366px;
+   margin: 0 auto;
+   padding: 10px;
+   height: 100%;
+}
+
+.modal__content__btn {
+   color: white;
+   border-radius: 10px;
+   background-color: #0B0E1B;
+   box-shadow: 3px 3px rgb(200, 46, 19);
+   border: none;
+   padding: 10px;
+   transition: all .5s ease;
+
+   &:hover {
+      box-shadow: none;
+   }
+}
+
+.titleText {
+   text-align: center;
+   margin-top: 20px;
+   margin-bottom: 30px;
+}
+
+.nothingAdd {
+   font-size: 25px;
+   display: flex;
+   font-weight: 700;
+   align-items: center;
+   justify-content: center;
+   margin-top: 100px;
+}
+
+.cartWrap {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 40px;
+   padding-bottom: 100px;
+}
+
+@media (max-width:1170px) {
+   .cartWrap {
+      flex-wrap: wrap;
+      gap: 10px;
+   }
+}
+
+@media (max-width:770px) {
+   .cartWrap {
+      justify-content: center;
+   }
+}
+
+
+
+.changeParams {
+   display: flex;
+   justify-content: center;
+   align-items: baseline;
+   margin-bottom: 20px;
+   gap: 100px;
+}
+
+@media (max-width:550px) {
+   .changeParams {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+   }
+}
+
+.viewParam {
+   margin-right: 15px;
+   font-weight: 500;
+}
+
+inputWrap {
+   position: relative;
+}
+
+.searchIcon {
+   position: absolute;
+   width: 30px;
+   height: 30px;
+   opacity: .7;
+   top: 3px;
+   margin-left: 5px;
+}
+
+.searchInput {
+   font-size: 18px;
+   padding: 5px 10px;
+   padding-left: 40px;
+   border-radius: 3px;
+   border: 1px solid #1638cf;
+   transition: outline .2s linear;
+   transition: border-radius .2s linear;
+   transition: box-shadow .2s linear;
+   width: 220px;
+   transition: width .1s linear;
+
+   &:focus {
+      outline: none;
+      border-radius: 5px;
+      box-shadow: 0px 1px 8px 0px rgba(22, 15, 220, 0.5);
+      width: 270px;
+
+   }
+}
