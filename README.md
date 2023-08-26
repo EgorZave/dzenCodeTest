@@ -1,6 +1,6 @@
 # Для початку роботи із цим проектом:
 
-### `git clone https....`
+### `git clone https://github.com/EgorZave/dzenCodeTest.git`
 
 ### `npm i` 
 Для встановлення усіх залежностей 
