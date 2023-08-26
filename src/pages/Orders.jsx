@@ -5,22 +5,42 @@ import { useState } from 'react'
 import Order from '../components/Order/Order'
 import Product from '../components/Product/Product'
 import transition from '../transition';
+import Modal from "../components/modal/index";
+import { useDispatch } from "react-redux";
+import { setIsModalOpen } from "../slices/modalSlice";
+import { setOrder } from "../slices/selectedOrderSlice";
 
 
 function Orders() {
    const { orders } = useSelector((state) => state.orders)
+   const { products } = useSelector((state) => state.products);
    const [selectedOrder, setSelectedOrder] = useState(null);
    const [isDetailsOpen, setIsDetailsOpen] = useState(false);
-
+   const { isModalOpen } = useSelector((state) => state.modal)
+   const dispatch = useDispatch();
+   const handleClick = (e, orderId) => {
+      if (e.target.tagName === "BUTTON") {
+         dispatch(setIsModalOpen())
+         dispatch(setOrder(orderId))
+         setIsDetailsOpen(false);
+      } else {
+         const selected = products.find(product => product.id === orderId);
+         setSelectedOrder(selected);
+         setIsDetailsOpen(true);
+      }
+   }
    return (
       <>
+         {
+            isModalOpen && <Modal header={"Вы уверены что хотите удалить этот приход?"} />
+         }
          <NavigationMenu />
          <section
             className='orders'>
             {orders.length === 0 ? <div>Orders list is empty!</div> : <ul className='orders__list'>
                {orders.map((order) => {
                   return (
-                     <Order key={order.id} {...order} setSelectedOrder={setSelectedOrder} setIsDetailsOpen={setIsDetailsOpen} />
+                     <Order handleClick={handleClick} key={order.id} {...order} setSelectedOrder={setSelectedOrder} setIsDetailsOpen={setIsDetailsOpen} />
                   )
                })}
             </ul>}

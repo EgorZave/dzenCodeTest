@@ -44,24 +44,45 @@
    font-size: 24px;
 }
 
-.text {
-   color: #0B0E1B;
-   text-align: center;
-   margin: 15px 0;
-   font-size: 22px;
-   font-weight: 500;
-}
-
 .btn-wrap {
    display: flex;
    gap: 100px;
    padding-bottom: 10px;
 }
 
-.close-button {
+.modal-close-btn {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: rgb(169, 166, 166);
+   border-radius: 50%;
+   width: 15px;
+   height: 15px;
+   font-size: 20px;
+   padding: 15px;
+   position: absolute;
+   top: -17px;
+   right: -17px;
    color: aliceblue;
    border: none;
-   padding: 10px;
-   background-color: #0B0E1B;
    cursor: pointer;
+}
+
+.delete-btn {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+   color: #ff0000;
+   background-color: white;
+   border-radius: 10px;
+   cursor: pointer;
+
+}
+
+.modal-cancel-btn {
+   cursor: pointer;
+   color: black;
+   background-color: white;
+   border-radius: 10px;
 }
